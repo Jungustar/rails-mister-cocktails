@@ -10,15 +10,23 @@
   </div>
 <div class="col-sm">
   <h2>Ingredient</h2>
-<% @cocktail.doses.each do |dose| %>
-<ul class="list-group list-group-flush">
-  <li class="list-group-item" ><%= dose.ingredient.name%></li>
-</ul>
-<% end %>
-<div class ="container mt-5">
-<%= link_to "Add dose", new_cocktail_dose_path(@cocktail), class: "btn btn-ghost"%>
+  <% @cocktail.doses.each do |dose| %>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item" ><%= dose.ingredient.name%></li>
+  </ul>
+  <% end %>
+  <div class ="container mt-5">
+    <%= link_to "Add dose", new_cocktail_dose_path(@cocktail), class: "btn btn-ghost"%>
+  </div>
+</div>
+<div class="container">
+    <h2>Reviews</h2>
+    <% @cocktail.reviews.each do |review| %>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item" ><%= review.content %></li>
+      </ul>
+    <% end %>
+    <%= link_to "Add review", new_cocktail_review_path(@cocktail), class: "btn btn-ghost"%>
 </div>
 </div>
-</div>
-
 </div>
