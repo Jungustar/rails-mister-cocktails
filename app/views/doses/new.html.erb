@@ -1,0 +1,12 @@
+<div class="container">
+  <p>Find me in app/views/doses/new.html.erb</p>
+</div>
+
+<div class="container mt-5">
+  <h1>Doses for <%= @cocktail.name %></h1>
+  <%= simple_form_for([@cocktail, @dose]) do |f| %>
+    <%= f.association :ingredient, collection: Ingredient.all %>
+    <%= f.input :description %>
+    <%= f.submit "Save", class: "btn btn-ghost" %>
+  <% end %>
+</div>
