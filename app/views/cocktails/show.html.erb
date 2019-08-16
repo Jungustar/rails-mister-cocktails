@@ -4,11 +4,21 @@
 
 <div class="container mt-5">
 <h1><%= @cocktail.name %></h1>
+  <div class="row">
+  <div class ="col-sm">
+    <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill, class: "rounded my-3" %>
+  </div>
+<div class="col-sm">
+  <h2>Ingredient</h2>
 <% @cocktail.doses.each do |dose| %>
-<ul>
-  <li><%= dose.ingredient.name%></li>
+<ul class="list-group list-group-flush">
+  <li class="list-group-item" ><%= dose.ingredient.name%></li>
 </ul>
 <% end %>
-
+<div class ="container mt-5">
 <%= link_to "Add dose", new_cocktail_dose_path(@cocktail), class: "btn btn-ghost"%>
+</div>
+</div>
+</div>
+
 </div>

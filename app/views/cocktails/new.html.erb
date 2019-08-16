@@ -1,10 +1,20 @@
-<h1>Cocktails#new</h1>
-<p>Find me in app/views/cocktails/new.html.erb</p>
+<div class=container>
+dasdasdas
+</div>
 
-
-<div class="container">
-  <%= simple_form_for [@cocktail] do |f| %>
+<div class="container align-middle mt-5">
+<h1>Add your new Cocktail</h1>
+<div class="row">
+  <div class="col-4">
+    <img src="https://images.unsplash.com/photo-1527661591475-527312dd65f5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=358&q=80" class="rounded" alt="">
+  </div>
+  <div class="col-8">
+    <%= simple_form_for [@cocktail] do |f| %>
     <%= f.input :name %>
-    <%= f.submit "Save", class: "btn btn-primary" %>
+    <%= f.input :photo %>
+    <%= f.input :photo_cache, as: :hidden, class: "btn btn-ghost" %>
+  </div>
+    <%= f.submit "Save", class: "btn btn-ghost" %>
   <% end %>
+</div>
 </div>
