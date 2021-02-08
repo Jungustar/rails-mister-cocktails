@@ -35,7 +35,7 @@ gem 'simple_form'
 # gem 'mini_magick', '~> 4.8'
 gem 'dotenv-rails', groups: [:development, :test]
 # Use Capistrano for deployment
-gem 'carrierwave', '~> 1.2'
+gem 'carrierwave', '~> 1.3'
 # gem 'capistrano-rails', group: :development
 gem 'cloudinary', '~> 1.9.1'
 # Reduces boot times through caching; required in config/boot.rb
